@@ -1,0 +1,33 @@
+.container {
+    background-color: rgb(255, 255, 255);
+    min-height: 100vh;
+}
+
+.Text1 {
+    margin: 90px;
+    font-weight: bold;
+    color: black;
+    font-size: 2rem;
+
+}
+
+.box_space {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 80px;
+    padding: 20px;
+    margin: 50px;
+}
+
+.box {
+    width: 268px;
+    height: 330px;
+    background-color: #999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+}
