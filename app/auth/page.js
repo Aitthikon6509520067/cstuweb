@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import GenderInput from "@/components/genderInput";
 import Input from "@/components/input";
 import BirthdayInput from "@/components/birthdayinput";
@@ -13,6 +13,10 @@ export default function Auth() {
     const [name, setName] = useState('');
     const [password, setPassword] = useState('');
     const [variant, setVariant] = useState('login');
+
+    useEffect(() => {
+console.log("Start")
+    }, [])
     
     const toggleVariant = useCallback(() => {
         setVariant((currentVariant) => (currentVariant === 'login' ? 'register' : 'login'));
@@ -38,7 +42,7 @@ export default function Auth() {
                         {variant === 'login' ? 'LOG IN' : 'SIGN UP'}
                     </div>
                     <div className="flex flex-col gap-y-10">
-                        {variant === 'register' && (
+                        {variant === 'y' && (
                             <>
                                 <Input id="firstname" label="FIRSTNAME" placeholder="Enter your Firstname" type="text" />
                                 <Input id="lastname" label="LASTNAME" placeholder="Enter your Lastname" type="text" />
